@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import New from "./New";
 import axios from "axios";
 import Delete from "../component/Delete";
-import { Form, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 const Dashboard = () => {
+
   const [products, setProducts] = useState([]);
 
 
@@ -28,12 +29,11 @@ useEffect(fetchAllProducts, []);
       .then((res) => console.log(res));
     setProducts(products.filter((targetProduct) => targetProduct._id !== id));
   };
-  //TODO: ERROR on add a new product*
   // use below to view conole inspect*
   // console.log(products);
   return (
     <div>
-      {/*  ERROR HERE NEW PRODUCT NOT SHOWING UNLESS REFRESHED */}
+      {/*  using onCreateNew to call fetchAllProducts with axios to show newly added products (uses props inside the new.jsx) */}
       <New onCreateNew={fetchAllProducts}/>
       {products.length > 0 ? (
         //when using .map below we have to includes key={key} in the return

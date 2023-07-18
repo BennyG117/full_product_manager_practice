@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//TODO: ERROR not showing updated product when it's made*
 
-
+//props is onCreateNew = {fetchAllProducts} from the dashboard
 const New = (props) => {
   const navigator = useNavigate();
   const [formData, setFormData] = useState({
@@ -39,6 +38,7 @@ const {onCreateNew} = props
           description: "",
         });
         // navigator("/");
+        //line below uses props because we deconstructed on L15
         onCreateNew();
       })
       // .catch(err=>console.log(err))

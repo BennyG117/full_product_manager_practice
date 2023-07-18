@@ -1,3 +1,5 @@
+// const productController = require("../controllers/product.controller");
+
 const productController = require("../controllers/product.controller");
 
 //! below is added first to test along with routes.js
@@ -6,6 +8,9 @@ const root = require("./routes");
 module.exports = (app) => {
   //default test server check
   app.get("/", root);
+
+  //alt temp test
+  app.get("/hello", productController.hello);
 
   //create - post
   app.post("/api/products", productController.postCreateProduct);

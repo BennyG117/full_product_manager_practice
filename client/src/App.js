@@ -8,8 +8,6 @@ import New from './views/New'
 import Error from './views/Error'
 import ViewOne from './views/ViewOne';
 
-//TODO: determine issue where url routes based on localhost:3000 instead of port 8080 
-
 function App() {
   return (
     <div className="App">

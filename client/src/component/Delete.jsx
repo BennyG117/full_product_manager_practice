@@ -1,8 +1,16 @@
 import React from 'react'
 
-const Delete = () => {
+const Delete = (props) => {
+
+  //pass this into dashboard
+const {deleteProduct} = props
+
   return (
-    <div>Delete</div>
+    <div>
+      <button onClick={deleteProduct}>Delete</button>
+
+
+    </div>
   )
 }
 

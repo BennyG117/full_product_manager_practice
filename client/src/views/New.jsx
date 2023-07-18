@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
+//TODO: ERROR not showing updated product when it's made*
 
-const New = () => {
+
+const New = (props) => {
   const navigator = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
@@ -12,10 +13,13 @@ const New = () => {
     description: "",
   });
 
+const {onCreateNew} = props
+
   //added for errors:
   const [titleErr, setTitleErr] = useState("");
   const [priceErr, setPriceErr] = useState("");
   const [descriptionErr, setDescriptionErr] = useState("");
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,7 +38,8 @@ const New = () => {
           price: "",
           description: "",
         });
-        navigator("/");
+        // navigator("/");
+        onCreateNew();
       })
       // .catch(err=>console.log(err))
       .catch((err) => {

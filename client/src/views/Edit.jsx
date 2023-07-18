@@ -1,4 +1,4 @@
-//TODO: LEFT OFF OF 2:47 in the full stack mern video from friday (video 2 of the day) - url:  https://www.youtube.com/watch?v=2kgbElKO3lU&ab_channel=KyleM
+
 
 import React, { useState, useEffect } from "react";
 
@@ -19,7 +19,6 @@ const Edit = () => {
     description: "",
   });
 
-    //! Do we need to add for errors?
     const [titleErr, setTitleErr] = useState("");
     const [priceErr, setPriceErr] = useState("");
     const [descriptionErr, setDescriptionErr] = useState("");
@@ -51,15 +50,13 @@ const Edit = () => {
       .then((res) => {
         setFormData({
           title: "",
-          //!How to make price a float? (Decimal.128?)
           price: "",
           description: "",
         });
         //returns back to dashboard
         navigator("/");
       })
-      .catch(err=>console.log(err))
-      //! do we need the catch below for errors?
+      // .catch(err=>console.log(err))
       .catch((err) => {
         const errs = err.response.data.errors;
         if (errs.title) {

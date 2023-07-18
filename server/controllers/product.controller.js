@@ -1,6 +1,11 @@
 const Product = require("../models/product.model");
 
 module.exports = {
+  // temp test
+  hello: (req,res)=>{
+    res.json("Helllllooooooo World");
+  },
+
   postCreateProduct: (req, res) => {
     Product.create(req.body)
       .then((newItem) => {

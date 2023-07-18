@@ -1,6 +1,6 @@
 Remaining Tasks (SERVER SIDE): 
 
-- resolve.gitignore targeting the .env file so I can push without sending sensative data
+
 
 - determine what else is needed in the product.model.js to have created_at and updated_at work properly
 

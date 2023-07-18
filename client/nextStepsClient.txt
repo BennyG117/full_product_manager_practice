@@ -1,0 +1,8 @@
+Remaining Tasks (Client SIDE): 
+
+-make items listed on dashboard clickable to take us to edit page*
+
+-
+
+-
+

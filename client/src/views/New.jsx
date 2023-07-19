@@ -37,12 +37,18 @@ const {onCreateNew} = props
           price: "",
           description: "",
         });
-        // navigator("/");
+        // added if statement that determins if we're using onCreateNew from dashboard or New page, if it's in NEW we navigate, if on dashboard we use onCreateNew()
+        if (typeof onCreateNew == 'function') {
+          onCreateNew();
+        }else {
+          navigator("/");
+        }
+
         //line below uses props because we deconstructed on L15
-        onCreateNew();
       })
       // .catch(err=>console.log(err))
       .catch((err) => {
+      console.log(err, "test");
         const errs = err.response.data.errors;
         if (errs.title) {
           setTitleErr(errs.title.message);

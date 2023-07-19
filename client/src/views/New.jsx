@@ -95,6 +95,7 @@ const {onCreateNew} = props
             value={formData.price}
           />
           <br />
+          <p style={errStyle}>{descriptionErr}</p>
           <label>Description</label>
           <input
             name="description"

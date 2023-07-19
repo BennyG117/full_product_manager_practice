@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 
 import {Link} from 'react-router-dom'
@@ -7,8 +7,6 @@ import {Link} from 'react-router-dom'
 const ViewOne = () => {
 
     const {id} = useParams();
-
-    const navigator = useNavigate();
 
     const [oneProduct, setOneProduct] = useState ([]);
 

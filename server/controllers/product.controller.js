@@ -13,7 +13,8 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.json(err?.errors?.message || err);
+        res.status(400).json(err)
+        // res.json(err?.errors?.message || err);
       });
   },
 
@@ -24,7 +25,7 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.json(err?.errors?.message || err);
+        res.status(400).json(err)
       });
   },
   getOneProducts: (req, res) => {
@@ -34,7 +35,8 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.json(err?.errors?.message || err);
+        res.status(400).json(err)
+        // res.json(err?.errors?.message || err);
       });
   },
   putUpdateProduct: (req, res) => {
@@ -47,7 +49,8 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.json(err?.errors?.message || err);
+        res.status(400).json(err)
+        // res.json(err?.errors?.message || err);
       });
   },
   deleteProduct: (req, res) => {
@@ -57,7 +60,8 @@ module.exports = {
       })
       .catch((err) => {
         console.log(err);
-        res.json(err?.errors?.message || err);
+        res.status(400).json(err)
+        // res.json(err?.errors?.message || err);
       });
   }
 };

@@ -8,8 +8,10 @@ import axios from "axios";
 
 const Edit = () => {
 
+    //the id that's refrenced from Routes
     const { id } = useParams();
 
+    //like a redirect
     const navigator = useNavigate();
 
 
